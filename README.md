@@ -1,4 +1,4 @@
-# BibleRESTApi
+# BibleRESTAPI
 
 This is a REST API using the Bible.org Bible web service (https://labs.bible.org/api_web_service). 
 
