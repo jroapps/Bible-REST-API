@@ -29,30 +29,30 @@ while True:
         print("*" * 75)
         break
     elif userInput == "random":
-        response = requests.get("\n" + url + "random" + format)
-        if response.status_code == 200:
-            print("\n" + response.text + "\n")
+        res = req.get("\n" + url + "random" + format)
+        if res.status_code == 200:
+            print("\n" + res.text + "\n")
         else:
             print("\nCould not connect to API. Please try again later.\n")
             print("\nInterface exiting. Thanks for using the Daily Bible Search!\n")
             print("*" * 75)
             break
     elif userInput == "votd":
-        response = requests.get("\n" + url + "votd" + format)
-        if response.status_code == 200:
-            print("\n" + response.text + "\n")
+        res = req.get("\n" + url + "votd" + format)
+        if res.status_code == 200:
+            print("\n" + res.text + "\n")
         else:
             print("\nCould not connect to API. Please try again later.\n")
             print("\nInterface exiting. Thanks for using the Daily Bible Search!\n")
             print("*" * 75)
             break        
     else:
-        response = requests.get("\n" + url + userInput + format)
-        if response.status_code == 200:
-            if "SQL" in response.text:
+        res = req.get("\n" + url + userInput + format)
+        if res.status_code == 200:
+            if "SQL" in res.text:
                 print("\nPlease enter a valid verse. Please try again.\n")
             else:
-                print("\n" + response.text + "\n")
+                print("\n" + res.text + "\n")
         else:
             print("\nCould not connect to API. Please try again later.\n")
             print("\nInterface exiting. Thanks for using the Daily Bible Search!\n")
